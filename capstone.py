@@ -9,7 +9,7 @@ import numpy as np
 from rocketpy import *
 import datetime
 
-st.beta_set_page_config(
+st.set_page_config(
         page_title = "StellarThrust",
         page_icon = Image.open("Logo1.jpg")
 )
