@@ -37,6 +37,14 @@ if st.session_state['SS'] == 1:
         with st.container(border = True):
                 st.title("StellarThrust")
                 
+                components.html(
+                        <script>
+
+                        </script>
+                        height = 0
+                        width = 0
+                )
+                
                 
         
         if st.button("Start Simulation?", key = 15):
