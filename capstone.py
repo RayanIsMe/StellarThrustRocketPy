@@ -38,7 +38,7 @@ if st.session_state['SS'] == 1:
                 c1, c2 = st.columns(2)
                 with c1:
                         st.title("StellarThrust")
-                        st.subheader("A Rocket Launch Simulator")
+                        st.markdown(":orange[A Rocket Launch Simulator]")
                 with c2:
                         st.write("Image")
                 
