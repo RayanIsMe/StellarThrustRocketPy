@@ -9,6 +9,10 @@ import numpy as np
 from rocketpy import *
 import datetime
 
+st.beta_set_page_config(
+        page_title = "StellarThrust",
+        page_icon = Image.open("Logo1.jpg")
+)
 
 if 'SS' not in st.session_state:
         st.session_state['SS'] = 1
