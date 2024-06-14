@@ -40,7 +40,7 @@ if st.session_state['SS'] == 1:
                         st.title("StellarThrust")
                         st.markdown(":orange[A Rocket Launch Simulator]")
                 with c2:
-                        st.write("Image")
+                        st.image("Logo1.jpg")
                 
                 
                 
