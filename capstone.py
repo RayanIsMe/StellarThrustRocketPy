@@ -5,6 +5,7 @@ from rocketpy.plots.rocket_plots import _RocketPlots
 from rocketpy.plots.flight_plots import _FlightPlots
 import streamlit as st
 import numpy as np
+from PIL import Image
 
 from rocketpy import *
 import datetime
