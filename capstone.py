@@ -35,15 +35,14 @@ if st.session_state['SS'] == 1:
         # st.title("Rocket Simulation")
         # st.write("This is a rocket simulation aimed to educate high school students about the different factors that affect the launch of a rocket using an engaging and interactive way. In this app, users can learn about the variables that change different factors of a rocket, and are given the freedome to play with the values and look at the results of the launch first hand. This website's purpose is to give users a greater understanding of the complex task of launching a rocket and to be able to break down such a task into smaller, more comprehendable tasks.")
         with st.container(border = True):
-                st.title("StellarThrust")
+                c1, c2 = st.columns(2)
+                with c1:
+                        st.title("StellarThrust")
+                        st.markdown(":blue-background[A Rocket Launch Simulator]")
+                with c2:
+                        st.write("Image")
                 
-                components.html(
-                        <script>
-
-                        </script>
-                        height = 0
-                        width = 0
-                )
+                
                 
                 
         
