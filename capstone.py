@@ -12,7 +12,7 @@ import datetime
 
 st.set_page_config(
         page_title = "StellarThrust",
-        page_icon = Image.open("Logo2.png")
+        page_icon = Image.open("Logo1.jpg")
 )
 
 if 'SS' not in st.session_state:
