@@ -42,10 +42,21 @@ if st.session_state['SS'] == 1:
         with st.container(border = True):
                 c1, c2 = st.columns(2)
                 with c1:
+                        st.write("")
+                        st.write("")
                         st.title("StellarThrust")
-                        st.markdown(":orange[A Rocket Launch Simulator]")
+                        st.markdown(":orange[A Rocket Launch]")
+                        st.markdown(":orange[Simulator]")
                 with c2:
                         st.image("Logo1.jpg")
+
+        c1, c2 = st.columns(2)
+        with c1:
+                with st.expander(
+                        with st.container(border = True, key = 1009):
+                                st.header("ABOUT THE SIMULATION")
+                        ):
+                        st.write("This simulation ")
                 
                 
                 
