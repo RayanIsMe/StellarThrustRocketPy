@@ -52,7 +52,7 @@ if st.session_state['SS'] == 1:
 
         c1, c2 = st.columns(2)
         with c1:
-                with st.container(border = True, key = 1009):
+                with st.container(border = True):
                         st.header("ABOUT THE SIMULATION")
                         st.write("This simulation is aimed to")
                 
