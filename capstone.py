@@ -136,7 +136,7 @@ elif st.session_state['SS'] == 2:
                 with st.expander("Flaps"):
                         @st.experimental_dialog("More Info About Flaps")
                         def flapinfo():
-                                st.image("FlapImage.jpg")
+                                st.image("ImageFlaps.png")
                                 st.write("Flaps ensure the stabilisation of the rocket with the large force of aerodynamic air pressure. The nose cone is placed at the top of the rocket, allowing air to curve around the tip of the rocket. The tail is placed at the bottom of the rocket, and contorls the angular veocity compoenent of the rocket. ")
                         if "flapinfo" not in st.session_state:
                                 if st.button("Click me for more info", key = 190):
