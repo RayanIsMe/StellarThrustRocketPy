@@ -360,7 +360,7 @@ elif st.session_state['SS'] == 3:
                     )
         
         
-        with st.button("Back"):
+        if st.button("Back", key = 51):
                 st.sesssion_state['SS'] = 2
                 st.rerun()
         with st.container(border = True):
