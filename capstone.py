@@ -281,7 +281,7 @@ elif st.session_state['SS'] == 3:
         env = Environment(latitude=lat, longitude=long, elevation=eleva)
         tomorrow = datetime.date.today() + datetime.timedelta(days=1)
         env.set_date((tomorrow.year, tomorrow.month, tomorrow.day, 12))  # Hour given in UTC time
-        env.set_atmospheric_model(type="Forecast", file="GFS")
+        #env.set_atmospheric_model(type="Forecast", file="GFS")
 
         grain_in = st.session_state['grain_in_rad']
         grain_out = st.session_state['grain_out_rad']
@@ -335,7 +335,7 @@ elif st.session_state['SS'] == 3:
         tail = calisto.add_tail(
                 top_radius=st.session_state['tail_topradius'], bottom_radius=st.session_state['tail_bottomradius'], length=0.060, position=-1.194656 #variable
             )
-        calisto.add_motor(motor, position=-1.255) 
+        calisto.add_motor(motor, position=-1.255) https://github.com/RayanIsMe/StellarThrustRocketPy/blob/main/capstone.py
 
         Main = calisto.add_parachute(
             "Main",
