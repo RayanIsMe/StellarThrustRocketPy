@@ -250,10 +250,10 @@ elif st.session_state['SS'] == 2:
                                 
         st.header("Plot Rocket")
         @st.experimental_dialog("More Info About Simulation")
-                def moreinfo():
-                        st.write("To use this simulation, enter the desire valuers")
-                if st.button("Click me for more info", key = 12):
-                        nozzleinfo()
+        def moreinfo():
+                st.write("To use this simulation, enter the desire valuers")
+        if st.button("Click me for more info", key = 12):
+                nozzleinfo()
         plottype = st.radio(label = "", options = ["Motor", "Rocket"], index = 0)
         
         if plottype == "Motor":
