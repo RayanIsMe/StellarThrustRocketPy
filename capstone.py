@@ -82,7 +82,7 @@ elif st.session_state['SS'] == 2:
                                 st.write("The nozzle is the diverging part of the rocket. Here, the the gas expands outward and accelerates further, and is then converted into thrust. A smaller value of nozzle radius will reduce the acceleration of the particles but will focus the thrust to a specifc point. On the other hand, a larger value will increase the acceleration of the gas but will be spread out across the cross section of the nozzle width.")
 
                         
-                        if st.button("Click me for more info", key = 12):
+                        if st.button("Click me for more info", key = 124):
                                 nozzleinfo()
                         text_type_nozzle = st.radio(label = "Choose data type", options = ["Slider", "TextBox"], index = 0, key = 13)
                         if text_type_nozzle == "Slider":
