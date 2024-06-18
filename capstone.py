@@ -335,7 +335,7 @@ elif st.session_state['SS'] == 3:
         tail = calisto.add_tail(
                 top_radius=st.session_state['tail_topradius'], bottom_radius=st.session_state['tail_bottomradius'], length=0.060, position=-1.194656 #variable
             )
-        calisto.add_motor(motor, position=-1.255) https://github.com/RayanIsMe/StellarThrustRocketPy/blob/main/capstone.py
+        calisto.add_motor(motor, position=-1.255) 
 
         Main = calisto.add_parachute(
             "Main",
