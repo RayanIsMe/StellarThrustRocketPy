@@ -63,11 +63,11 @@ if st.session_state['SS'] == 1:
                 
                 
                 
-                
-        
-        if st.button("Start Simulation?", key = 15):
-                st.session_state['SS'] = 2
-                st.rerun()
+        v1, v2, v3 = st.columns(3)
+        with v2:
+                if st.button("Start Simulation", key = 15):
+                        st.session_state['SS'] = 2
+                        st.rerun()
 elif st.session_state['SS'] == 2:
         with st.sidebar:
                 st.header("Rocket Details")
@@ -249,6 +249,11 @@ elif st.session_state['SS'] == 2:
                 
                                 
         st.header("Plot Rocket")
+        @st.experimental_dialog("More Info About Simulation")
+                def moreinfo():
+                        st.write("To use this simulation, enter the desire valuers")
+                if st.button("Click me for more info", key = 12):
+                        nozzleinfo()
         plottype = st.radio(label = "", options = ["Motor", "Rocket"], index = 0)
         
         if plottype == "Motor":
@@ -355,7 +360,9 @@ elif st.session_state['SS'] == 3:
                     )
         
         
-
+        with st.button("Back"):
+                st.sesssion_state['SS'] = 2
+                st.rerun()
         with st.container(border = True):
                 st.header("Simulated Flight Results")
                 flightp = _FlightPlots(test_flight)
