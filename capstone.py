@@ -370,6 +370,11 @@ elif st.session_state['SS'] == 3:
                 st.rerun()
         with st.container(border = True):
                 st.header("Simulated Flight Results")
+                @st.experimental_dialog("How to interpret graphs")
+                def siminfo():
+                        st.write("")
+                if st.button("Click me for more info", key = 12):
+                        siminfo()
                 flightp = _FlightPlots(test_flight)
                 flightp.trajectory_3d()
                 flightp.angular_kinematics_data()
