@@ -39,7 +39,7 @@ if 'SS' not in st.session_state:
 if st.session_state['SS'] == 1:
         # st.title("Rocket Simulation")
         # st.write("This is a rocket simulation aimed to educate high school students about the different factors that affect the launch of a rocket using an engaging and interactive way. In this app, users can learn about the variables that change different factors of a rocket, and are given the freedome to play with the values and look at the results of the launch first hand. This website's purpose is to give users a greater understanding of the complex task of launching a rocket and to be able to break down such a task into smaller, more comprehendable tasks.")
-        with st.container(border = False):
+        with st.container(border = True):
                 c1, c2 = st.columns(2)
                 with c1:
                         st.write("")
@@ -59,7 +59,7 @@ if st.session_state['SS'] == 1:
         with c2:
                 with st.container(border = True):
                         st.subheader("ABOUT THE AUTHOR")
-                        st.write("I am a high school student passionate about the ")
+                        st.write("I am a high school student who has always been interested in aerospace and astrophysics sciences. Facinated by the workings of a rocket, I wanted to find an application that could allow me to learn and understand all the inner functions of a rocket without the need to invest a large amount of time understanding other advanced physics concepts. Therefore, I created this app which allowed students such as me to explore the advanced science of rockets while using a simple yet engaging application to understand the different parts of this rocket.")
                 
                 
                 
