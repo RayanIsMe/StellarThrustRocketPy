@@ -39,7 +39,7 @@ if 'SS' not in st.session_state:
 if st.session_state['SS'] == 1:
         # st.title("Rocket Simulation")
         # st.write("This is a rocket simulation aimed to educate high school students about the different factors that affect the launch of a rocket using an engaging and interactive way. In this app, users can learn about the variables that change different factors of a rocket, and are given the freedome to play with the values and look at the results of the launch first hand. This website's purpose is to give users a greater understanding of the complex task of launching a rocket and to be able to break down such a task into smaller, more comprehendable tasks.")
-        with st.container(border = True):
+        with st.container(border = False):
                 c1, c2 = st.columns(2)
                 with c1:
                         st.write("")
@@ -249,11 +249,16 @@ elif st.session_state['SS'] == 2:
                 
                                 
         st.header("Plot Rocket")
-        @st.experimental_dialog("More Info About Simulation")
+        @st.experimental_dialog("How to use the simulation")
         def moreinfo():
-                st.write("To use this simulation, enter the desire valuers")
+                st.subheader("1. Set Plot Type:")
+                st.write("Choose either the motor plot or the rocket plot depending on what you would like to see.")
+                st.subheader("2. Choose the rocket values:")
+                st.write("On the left panel, you can scroll down and find the different parts of the rocket that you can change, along with a breif description of what those values contribute to the lanuch of the rocket. You can also select if you want a slider or a textbox to change those values. As you change the values, you can see the change on the rocket in real time.")
+                st.subheader("3. Simulate flight")
+                st.write("After you're done with selecting the values, click on the 'Simulate flight' button which will lead you to the next page, showing a list of graphs about the flight which can be analysed. You can then click on the back button to return to this page if you want to change the values of the rocket again.")
         if st.button("Click me for more info", key = 12):
-                nozzleinfo()
+                moreinfo()
         plottype = st.radio(label = "", options = ["Motor", "Rocket"], index = 0)
         
         if plottype == "Motor":
