@@ -372,7 +372,8 @@ elif st.session_state['SS'] == 3:
                 st.header("Simulated Flight Results")
                 @st.experimental_dialog("How to interpret graphs")
                 def siminfo():
-                        st.write("")
+                        st.write("Shown are the graphs of the flight. The first graph is a representation of the flight path the rocket. Your goal when changing the values shold be to maximise the height reached by the rocket. Additionally, there are other helpful graphs shown below that can give information about the rotational dynamics, aerodynamics, and the total thrust applied on the rocket. These graphs can be used to change certain aspects of the rocket that require working. You can click on the back button to go back to the home screen and change the values.")
+                        st.write("The 'Download KML Flight' button will download a file that can be opened on google earth. This will allow you to visualise all three dimensions of the rocket path with much more clarity and precision.")
                 if st.button("Click me for more info", key = 12):
                         siminfo()
                 flightp = _FlightPlots(test_flight)
