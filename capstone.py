@@ -44,8 +44,6 @@ if st.session_state['SS'] == 1:
                         st.write("")
                         st.title("StellarThrust")
                         st.subheader("A Rocket Launch Simulator")
-                        # st.markdown(":orange[A Rocket Launch]")
-                        # st.markdown(":orange[Simulator]")
                 with c2:
                         st.image("Logo1.jpg")
 
@@ -77,6 +75,8 @@ elif st.session_state['SS'] == 2:
                 with st.expander("Nozzle"):
                         @st.experimental_dialog("More Info About Nozzle")
                         def nozzleinfo():
+                                st.markdown("**Throat:** The converging part of the motor")
+                                st.markdown("**Nozzle:** The diverging part of the rocket")
                                 st.image("NozzleImage.jpg")
                                 st.write("Nozzle is located at the base of the rocket, controlling the amount of gas that flows out of the system. It's shape is vital in determining the mass flow rate as well as the speed of the fuel as it exits the chamber. The nozzle has 2 parts: the throat and the nozzle.")
 
