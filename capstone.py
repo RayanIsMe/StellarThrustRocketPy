@@ -246,11 +246,6 @@ elif st.session_state['SS'] == 2:
                 )
                 
 
-        
-                                
-                
-                                
-        st.header("Plot Rocket")
         @st.experimental_dialog("How to use the simulation")
         def moreinfo():
                 st.subheader("1. Set Plot Type:")
@@ -276,6 +271,9 @@ elif st.session_state['SS'] == 2:
                 st.session_state['SS'] = 3
                 st.rerun()
                 
+        st.divider()
+        url = "https://docs.rocketpy.org/en/latest/"
+        st.caption("This simulation's calculations use data from [RocketPy](%s)" % url)
 
         
                 
@@ -384,9 +382,13 @@ elif st.session_state['SS'] == 3:
                 flightp.aerodynamic_forces()
                 flightp.energy_data()
                 st.image('flight1.jpg')
+                st.divider()
                 st.image('vital.png')
+                st.divider()
                 st.image('flight3.jpg')
+                st.divider()
                 st.image('flight5.jpg')
+                st.divider()
 
         test_flight.export_kml(file_name="test_flight.kml")
         with open("test_flight.kml",'rb') as file:
@@ -396,3 +398,8 @@ elif st.session_state['SS'] == 3:
                     file_name = "test_file.kml",
                     mime = "application/vnd.google-earth.kml+xml"
                 )
+
+        st.divider()
+        url = "https://docs.rocketpy.org/en/latest/"
+        st.caption("This simulation's calculations use data from [RocketPy](%s)" % url)
+
