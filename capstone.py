@@ -61,8 +61,8 @@ if st.session_state['SS'] == 1:
                 
                 
                 
-        v1, v2, v3 = st.columns(3)
-        with v2:
+        v1, v2, v3, v4, v5, v6, v7 = st.columns(7)
+        with v4:
                 if st.button("Start Simulation", key = 15):
                         st.session_state['SS'] = 2
                         st.rerun()
