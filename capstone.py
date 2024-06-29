@@ -69,7 +69,7 @@ if st.session_state['SS'] == 1:
 
         st.divider()
         url = "https://docs.rocketpy.org/en/latest/"
-        st.write("check out this [link](%s)" % url)
+        st.caption("This simulation's calculations use data from [RocketPy](%s)" % url)
 elif st.session_state['SS'] == 2:
         with st.sidebar:
                 st.header("Rocket Details")
