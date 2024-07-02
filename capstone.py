@@ -33,6 +33,9 @@ if 'SS' not in st.session_state:
         st.session_state['upper_button_pos'] = 0.0818
         st.session_state['lower_button_pos'] = -0.618
         st.session_state['nose_cone_pos'] = 1.5
+        st.session_state['root_chord'] = 0.12
+        st.session_state['tip_chord'] = 0.06
+        st.session_state['fin_position'] = -1
 
 
 
@@ -150,11 +153,17 @@ elif st.session_state['SS'] == 2:
                                 st.session_state['nose_cone_pos'] = st.select_slider(label = "Nose Cone position/meters", options = np.arange(0.0,5.0,0.1), value = 1.5)
                                 st.session_state['tail_topradius'] = st.select_slider(label = "Tail Top radius/meters", options = np.arange(0,0.5,0.001), value = 0.06)
                                 st.session_state['tail_bottomradius'] = st.select_slider(label = "Tail Bottom radius/meters", options = np.arange(0.0,0.5,0.001), value = 0.04)
+                                st.session_state['root_chord'] = st.select_slider(label = "Fin bottom length/meters", options = np.arange(0.001,0.5,0.001), value = 0.12)
+                                st.session_state['tip_chord'] = st.select_slider(label = "Fin top length/meters", options = np.arange(0.001,0.5,0.001), value = 0.06)
+                                st.session_state['fin_position'] = st.select_slider(label = "Fin position/meters", options = np.arange(-1,1,0.01), value = -1)
                         else:
                                 st.session_state['nosecone_length'] = st.number_input(label = "Nose Cone Length/meters", min_value=0.0, max_value=1.0, step=0.01, value = 0.55)
                                 st.session_state['nose_cone_pos'] = st.number_input(label = "Nose Cone position/meters", min_value=0.0, max_value=5.0, step=0.1, value = 1.5)
                                 st.session_state['tail_topradius'] = st.number_input(label = "Tail Top radius/meters", min_value=0.0, max_value=0.5, step=0.001, value = 0.06)
                                 st.session_state['tail_bottomradius'] = st.number_input(label = "Tail Bottom radius/meters", min_value=0.0, max_value=0.5, step=0.001, value = 0.04)
+                                st.session_state['root_chord'] = st.number_input(label = "Fin bottom length/meters", min_value=0.0, max_value=0.5, step=0.001, value = 0.12)
+                                st.session_state['tip_chord'] = st.number_input(label = "Fin top length/meters", min_value=0.0, max_value=0.5, step=0.001, value = 0.06)
+                                st.session_state['fin_position'] = st.number_input(label = "Fin position/meters", min_value=-1.0, max_value=1.0, step=0.001, value = -1.0)
 
 
                 with st.expander("Rail Buttons"):
@@ -214,10 +223,10 @@ elif st.session_state['SS'] == 2:
                     
                 fin_set = calisto.add_trapezoidal_fins(
                         n=4,
-                        root_chord=0.120,
-                        tip_chord=0.060,
+                        root_chord=st.session_state['root_chord'],
+                        tip_chord=st.session_state['tip_chord'],
                         span=0.110,
-                        position=-1.04956,
+                        position=st.session_state['fin_position'],
                         cant_angle=0.5,
                         airfoil=("NACA0012-radians.csv","radians"),
                     )
@@ -328,14 +337,14 @@ elif st.session_state['SS'] == 3:
             )
             
         fin_set = calisto.add_trapezoidal_fins(
-                n=4,
-                root_chord=0.120,
-                tip_chord=0.060,
-                span=0.110,
-                position=-1.04956,
-                cant_angle=0.5,
-                airfoil=("NACA0012-radians.csv","radians"),
-            )
+                        n=4,
+                        root_chord=st.session_state['root_chord'],
+                        tip_chord=st.session_state['tip_chord'],
+                        span=0.110,
+                        position=st.session_state['fin_position'],
+                        cant_angle=0.5,
+                        airfoil=("NACA0012-radians.csv","radians"),
+                    )
             
         tail = calisto.add_tail(
                 top_radius=st.session_state['tail_topradius'], bottom_radius=st.session_state['tail_bottomradius'], length=0.060, position=-1.194656 #variable
