@@ -94,7 +94,7 @@ elif st.session_state['SS'] == 2:
                         else:
                                 st.session_state['nozzle_radius'] = st.number_input(label = "Nozzle Radius/meters", min_value=0.001, max_value=0.1, step=0.001, value = 0.033)
                                 st.session_state['throat_radius'] = st.number_input(label = "Throat Radius/meters", min_value=0.001, max_value=0.1, step=0.001, value = 0.011)
-                                st.session_state['nozzle_pos'] = st.number_input(label = "Throat Position/meters", min_value=-1.0, max_value=1.0, step=0.01, value = 0.0)
+                                st.session_state['nozzle_pos'] = st.number_input(label = "Nozzle Position/meters", min_value=-1.0, max_value=1.0, step=0.01, value = 0.0)
 
                 with st.expander("Grain"):
                         @st.experimental_dialog("More Info About Grain")
